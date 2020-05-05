@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Roll-a-ball.unity
+    guid: 5d172218898b24ee787fae2d2223bd9d
   m_configObjects: {}
