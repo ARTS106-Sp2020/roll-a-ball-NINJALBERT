@@ -717,6 +717,8 @@ MonoBehaviour:
   speed: 10
   countText: {fileID: 808777297}
   winText: {fileID: 1356880875}
+  restartButton: {fileID: 1766459686}
+  mainMenuButton: {fileID: 1942515484}
 --- !u!54 &348692454
 Rigidbody:
   m_ObjectHideFlags: 0

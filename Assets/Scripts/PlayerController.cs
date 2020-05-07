@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public Text countText;
     public Text winText;
+ 	public GameObject restartButton;
+	public GameObject mainMenuButton;
 
     private Rigidbody rb;
     private int count;
@@ -17,6 +19,8 @@ public class PlayerController : MonoBehaviour {
         count = 0;
         SetCountText ();
         winText.text = "";
+	    restartButton.SetActive(false);
+	    mainMenuButton.SetActive(false);
     }
 
     void FixedUpdate ()
@@ -45,6 +49,8 @@ public class PlayerController : MonoBehaviour {
         if (count >= 12)
         {
             winText.text = "You Win!";
+	    	restartButton.SetActive(true);
+		mainMenuButton.SetActive(true);
         }
     }
 }
