@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
     public float speed;
     public Text countText;
-    public GameObject winDialog;
+    public Text winText;
 
     private Rigidbody rb;
     private int count;
@@ -17,7 +16,7 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText ();
-	winDialog.SetActive(false);
+        winText.text = "";
     }
 
     void FixedUpdate ()
@@ -45,18 +44,7 @@ public class PlayerController : MonoBehaviour {
         countText.text = "Count: " + count.ToString ();
         if (count >= 12)
         {
-            winDialog.SetActive(true);
+            winText.text = "You Win!";
         }
     }
-
-    /*public void RestartGame()
-    {
-	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void ExitToMenu()
-    {
-	SceneManager.LoadScene("Title Screen");
-    }
-*/
 }

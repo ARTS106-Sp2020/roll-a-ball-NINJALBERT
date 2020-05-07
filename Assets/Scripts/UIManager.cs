@@ -30,4 +30,15 @@ public class UIManager : MonoBehaviour
 	infoDialog.SetBool("isHidden", true);
     }
 
+
+
+    public void RestartGame()
+    {
+	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    public void MainMenu()
+    {
+	SceneManager.LoadScene("Title Screen");
+    }
 }
